@@ -9,12 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@notionhq/client": "^2.3.0",
     "@types/node": "22.13.13",
     "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4",
     "eslint": "9.23.0",
     "eslint-config-next": "15.2.3",
     "next": "15.2.3",
+    "notion-to-md": "^4.0.0-alpha.4",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "typescript": "5.8.2"
