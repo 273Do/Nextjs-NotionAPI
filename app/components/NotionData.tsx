@@ -1,4 +1,4 @@
-import { P } from "notion-to-md/build/page-URuPGmoo";
+import Image from "next/image";
 import React from "react";
 
 const NotionData = async () => {
@@ -19,11 +19,11 @@ const NotionData = async () => {
               <p>{post.date}</p>
               <div style={{ display: "flex", gap: "10px" }}>
                 {post.tags.map((tag: string) => {
-                  return <p key={tag}>{tag}</p>;
+                  return <p key={tag}>#{tag}</p>;
                 })}
               </div>
               {post.files.length ? (
-                <img src={post.files} alt="file" width={100} />
+                <img src={post.files} alt={post.title} width={100} />
               ) : (
                 <p>no file</p>
               )}

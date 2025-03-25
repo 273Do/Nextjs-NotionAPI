@@ -89,7 +89,7 @@ export default function Home() {
     //   </div>
     // </main>
     <div>
-      <p>test</p>
+      <p>投稿一覧</p>
       <NotionData />
     </div>
   );
