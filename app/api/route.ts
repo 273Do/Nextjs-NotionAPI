@@ -30,7 +30,9 @@ export async function GET() {
       const files = post.properties.file.files.map(
         (file: any) => file.file.url
       );
-      return { id, title, date, color, tags, files };
+
+      const isPublic = post.properties.isPublic.checkbox;
+      return { id, title, date, color, tags, files, isPublic };
     });
 
     // データベースから取得したデータをJSONレスポンスとして返す

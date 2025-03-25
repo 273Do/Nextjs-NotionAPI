@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const NotionData = async () => {
@@ -11,23 +12,27 @@ const NotionData = async () => {
       <>
         {data.map((post: any) => {
           return (
-            <div
-              key={post.id}
-              style={{ border: "1px solid white", margin: "10px" }}
-            >
-              <h2 style={{ color: post.color }}>{post.title}</h2>
-              <p>{post.date}</p>
-              <div style={{ display: "flex", gap: "10px" }}>
-                {post.tags.map((tag: string) => {
-                  return <p key={tag}>#{tag}</p>;
-                })}
+            post.isPublic && (
+              <div
+                key={post.id}
+                style={{ border: "1px solid white", margin: "10px" }}
+              >
+                <Link href={`/${post.id}`}>
+                  <h2 style={{ color: post.color }}>{post.title}</h2>
+                </Link>
+                <p>{post.date}</p>
+                <div style={{ display: "flex", gap: "10px" }}>
+                  {post.tags.map((tag: string) => {
+                    return <p key={tag}>#{tag}</p>;
+                  })}
+                </div>
+                {post.files.length ? (
+                  <img src={post.files} alt={post.title} width={100} />
+                ) : (
+                  <p>no file</p>
+                )}
               </div>
-              {post.files.length ? (
-                <img src={post.files} alt={post.title} width={100} />
-              ) : (
-                <p>no file</p>
-              )}
-            </div>
+            )
           );
         })}
       </>
