@@ -1,3 +1,9 @@
+- 参考
+- https://sinpe-pgm.com/notionblog_nextjs/
+- https://zenn.dev/naginagi124/articles/ddd039003004f8
+- https://zenn.dev/jinku/articles/722e8f93e87111#%E4%BD%BF%E7%94%A8%E6%8A%80%E8%A1%93
+- https://tech.kikagaku.co.jp/entry/2024/01/24/090000
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
